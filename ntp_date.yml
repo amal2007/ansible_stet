@@ -1,0 +1,15 @@
+---
+- hosts: 192.168.0.8
+  tasks: 
+    - name: installer NTP
+      yum:
+        name: ntp
+        state: present
+
+    - name: activer NTP
+      service: 
+        name: ntpd
+        state: started
+    - name: afficher la date
+      debug:
+        var: ansible_date_time

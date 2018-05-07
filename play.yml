@@ -1,0 +1,16 @@
+---
+- hosts: 192.168.0.5
+  vars:
+    users:
+      user1: 
+        name: axel
+        age: 27
+      user2: 
+        name: tom
+        age: 58
+  tasks: 
+    - name: create file with user name
+      file:
+        path: /etc/ansible/{{ item.value.name }}
+        state: touch 
+  loop: "{{ lookup('dict', users) }}"

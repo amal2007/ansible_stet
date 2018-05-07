@@ -1,0 +1,23 @@
+---
+- hosts: 192.168.0.8
+  tasks: 
+    - name: install docker
+      yum:  
+        name: docker
+        state: present
+    - name: démarrer docker.service
+      service:
+        name: docker.service
+        state: started
+
+    - name: Download image
+      docker_container: 
+        name: mycontainer
+        image: nginx
+        state: present 
+    - name: démarrer le conteneur
+      docker_container:
+        name: mycontainer
+        image: nginx
+        state: started
+ 

@@ -1,0 +1,15 @@
+---
+- hosts: 192.168.0.5 
+  gather_facts: true
+
+  tasks:
+    - name: reup user info
+      shell: cat /etc/passwd | egrep "amal" 
+      register: user_info
+
+    - name: afficher
+      debug:
+        msg: "{{user_info.stdout_lines}}"
+
+    - debug:
+        msg: "NB of CPUs for the host {{ inventory_hostname }}:{{ ansible_hostname}} = {{ ansible_processor_vcpus }}"

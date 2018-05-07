@@ -1,0 +1,14 @@
+Connexions Internet actives (seulement serveurs)
+Proto Recv-Q Send-Q Adresse locale          Adresse distante        Etat        PID/Program name    
+tcp        0      0 0.0.0.0:22              0.0.0.0:*               LISTEN      1045/sshd           
+tcp        0      0 127.0.0.1:25            0.0.0.0:*               LISTEN      1266/master         
+tcp6       0      0 :::22                   :::*                    LISTEN      1045/sshd           
+tcp6       0      0 ::1:25                  :::*                    LISTEN      1266/master         
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           4692/dhclient       
+udp        0      0 0.0.0.0:68              0.0.0.0:*                           1462/dhclient       
+udp        0      0 0.0.0.0:56390           0.0.0.0:*                           4692/dhclient       
+udp        0      0 0.0.0.0:31877           0.0.0.0:*                           1462/dhclient       
+udp        0      0 127.0.0.1:323           0.0.0.0:*                           650/chronyd         
+udp6       0      0 :::10817                :::*                                1462/dhclient       
+udp6       0      0 :::37665                :::*                                4692/dhclient       
+udp6       0      0 ::1:323                 :::*                                650/chronyd         

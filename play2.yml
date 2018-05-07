@@ -1,0 +1,14 @@
+---
+- hosts: 192.168.0.5
+  vars:
+    users:
+      user1: 
+        name: axel
+        age: 27
+      user2: 
+        name: tom
+        age: 58
+  tasks: 
+    - name: create file with user name
+      shell: mkdir /etc/ansible/"{{ item.key }}" 
+      with_dict: "{{ users }}"

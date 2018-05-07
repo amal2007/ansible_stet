@@ -1,0 +1,17 @@
+---
+- hosts: 192.168.0.8
+  gather_facts: true
+  
+  tasks:
+    - name: installer maria DB
+      yum: 
+        name: mariadb-server
+        state: present
+    - name: demarrer mariadb
+      service:
+        name: mariadb
+        state: started
+    - debug: 
+        var: hostvar
+
+
